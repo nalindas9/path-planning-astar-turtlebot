@@ -41,4 +41,4 @@ plt.axis("scaled")
 
 
 plt.grid(color='lightgray',linestyle='--')
-plt.show()
+
