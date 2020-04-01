@@ -8,6 +8,7 @@ University of Maryland, College Park
 """
 
 def main():
+  # Taking inputs from the user
   start_point = eval(input('Please enter the start coordinates for the robot in this format - [X_coord, Y_coord, Theta]:'))
   print('The start point you entered is:', start_point)
   print('')  
