@@ -15,17 +15,18 @@ from math import pi
 
 fig = plt.figure()
 plt.axes()
-plt.xlim(0, 10.2)
-plt.ylim(0, 10.2)
-circle1 = plt.Circle((3, 2), radius=1, fill=False, ec="red")
-circle2 = plt.Circle((7, 2), radius=1, fill=False, ec="red")
-circle3 = plt.Circle((5, 5), radius=1, fill=False, ec="red")
-circle4 = plt.Circle((7, 8), radius=1, fill=False, ec="red")
-square1 = plt.Rectangle((2.25, 7.25), width=1.5, height=1.5, fill=False, ec="red")
-square2 = plt.Rectangle((0.25, 4.25), width=1.5, height=1.5, fill=False, ec="red")
-square3 = plt.Rectangle((8.25, 4.25), width=1.5, height=1.5, fill=False, ec="red")
-inner_wall = plt.Rectangle((0.1, 0.1), width=10, height=10, fill=False)
-outer_wall = plt.Rectangle((0, 0), width=10.2, height=10.2, fill=False)
+plt.xlim(-5.1, 5.1)
+plt.ylim(-5.1, 5.1)
+offset = 5.1
+circle1 = plt.Circle((3.1-offset, 2.1-offset), radius=1, fill=False, ec="red")
+circle2 = plt.Circle((7.1-offset, 2.1-offset), radius=1, fill=False, ec="red")
+circle3 = plt.Circle((5.1-offset, 5.1-offset), radius=1, fill=False, ec="red")
+circle4 = plt.Circle((7.1-offset, 8.1-offset), radius=1, fill=False, ec="red")
+square1 = plt.Rectangle((2.35-offset, 7.35-offset), width=1.5, height=1.5, fill=False, ec="red")
+square2 = plt.Rectangle((0.35-offset, 4.35-offset), width=1.5, height=1.5, fill=False, ec="red")
+square3 = plt.Rectangle((8.35-offset, 4.35-offset), width=1.5, height=1.5, fill=False, ec="red")
+inner_wall = plt.Rectangle((0.1-offset, 0.1-offset), width=10, height=10, fill=False)
+outer_wall = plt.Rectangle((0-offset, 0-offset), width=10.2, height=10.2, fill=False)
 
 plt.gca().add_patch(circle1)
 plt.gca().add_patch(circle2)
@@ -40,4 +41,4 @@ plt.axis("scaled")
 
 
 plt.grid(color='lightgray',linestyle='--')
-
+plt.show()
