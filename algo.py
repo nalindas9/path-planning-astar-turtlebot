@@ -15,13 +15,13 @@ import random
 
 k = 0
 # 3D array with (x,y,theta) as index
-visited_nodes = np.zeros((50,50,36))
+visited_nodes = np.zeros((50,50,37))
 # Dictionary for backtracking 
 valid_childs_dict = {}
 # List to store all the explored nodes for visualization
 explored = []
 # Node class containing action set, graph generation and Astar Algorithm
-
+weight = 6
 class Node():
   # Constructor for Node class
   def __init__(self, start_node, goal_node, parent_node, clearance, rpm1, rpm2):
@@ -31,6 +31,7 @@ class Node():
     self.goal_node = goal_node
     self.rpm1 = rpm1
     self.rpm2 = rpm2
+    
   
   # Method to find new coordinates for non holonomic constraints
   def move(self,Xi,Yi,Thetai,UL,UR):
@@ -64,7 +65,7 @@ class Node():
     angle = (theta_new)%360
     new_node = [x_new, y_new, angle]
     cost2come = cost + 1.5
-    cost2go = 15*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
+    cost2go = weight*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
     total_cost = cost2come + cost2go
     new_node.append(total_cost)
     new_node.append(cost2come)
@@ -75,7 +76,7 @@ class Node():
     angle = (theta_new)%360
     new_node = [x_new, y_new, angle]
     cost2come = cost + 1.3
-    cost2go = 15*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
+    cost2go = weight*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
     total_cost = cost2come + cost2go
     new_node.append(total_cost)
     new_node.append(cost2come)
@@ -86,7 +87,7 @@ class Node():
     angle = (theta_new)%360
     new_node = [x_new, y_new, angle]
     cost2come = cost + 1
-    cost2go = 15*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
+    cost2go = weight*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
     total_cost = cost2come + cost2go
     new_node.append(total_cost)
     new_node.append(cost2come)
@@ -97,7 +98,7 @@ class Node():
     angle = (theta_new)%360
     new_node = [x_new, y_new, angle]
     cost2come = cost + 1.5
-    cost2go = 15*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
+    cost2go = weight*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
     total_cost = cost2come + cost2go
     new_node.append(total_cost)
     new_node.append(cost2come)
@@ -108,7 +109,7 @@ class Node():
     angle = (theta_new)%360
     new_node = [x_new, y_new, angle]
     cost2come = cost + 1.5
-    cost2go = 15*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
+    cost2go = weight*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
     total_cost = cost2come + cost2go
     new_node.append(total_cost)
     new_node.append(cost2come)
@@ -119,7 +120,7 @@ class Node():
     angle = (theta_new)%360
     new_node = [x_new, y_new, angle]
     cost2come = cost + 1
-    cost2go = 15*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
+    cost2go = weight*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
     total_cost = cost2come + cost2go
     new_node.append(total_cost)
     new_node.append(cost2come)
@@ -130,7 +131,7 @@ class Node():
     angle = (theta_new)%360
     new_node = [x_new, y_new, angle]
     cost2come = cost + 1.3
-    cost2go = 15*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
+    cost2go = weight*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
     total_cost = cost2come + cost2go
     new_node.append(total_cost)
     new_node.append(cost2come)
@@ -141,7 +142,7 @@ class Node():
     angle = (theta_new)%360
     new_node = [x_new, y_new, angle]
     cost2come = cost + 1.3
-    cost2go = 15*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
+    cost2go = weight*((self.goal_node[0]-new_node[0])**2 + (self.goal_node[1]-new_node[1])**2)**(1/2)
     total_cost = cost2come + cost2go
     new_node.append(total_cost)
     new_node.append(cost2come)
@@ -197,7 +198,7 @@ class Node():
       cum_cost = explored_nodes[0][2]
       itr = itr+1
       if ((min_cost_child[0] - self.goal_node[0]) ** 2 + (min_cost_child[1] - self.goal_node[1]) ** 2) <= 0.25 ** 2:
-        final_node_key =  explored_nodes[0][3]
+        final_node_key =  (min_cost_child[0], min_cost_child[1], min_cost_child[2])
         print('Goal node found!')
         break 
     print('Started Backtracking ...')

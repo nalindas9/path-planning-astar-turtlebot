@@ -73,9 +73,9 @@ def main():
       points4x.append((path[-1][0])-(path[point][0]))
       points4y.append((path[-1][1])-(path[point][1]))
   
-  plt.quiver(np.array(points1x), np.array(points1y), np.array(points2x), np.array(points2y), units='xy' ,scale=1, label = 'Final Path', color = 'r')
+  plt.quiver(np.array(points1x), np.array(points1y), np.array(points2x), np.array(points2y), units='xy' ,scale=1, label = 'Final Path', color = 'g', headwidth = 1,headlength=1)
      
-  plt.quiver(np.array(points3x), np.array(points3y), np.array(points4x), np.array(points4y), units='xy' ,scale=1, label = 'Final Path')
+  plt.quiver(np.array(points3x), np.array(points3y), np.array(points4x), np.array(points4y), units='xy' ,scale=1, label = 'Final Path', color = 'b')
   
   plt.show()
   
