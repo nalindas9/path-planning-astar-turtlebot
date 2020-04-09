@@ -36,8 +36,8 @@ class Node():
   # Method to find new coordinates for non holonomic constraints
   def move(self,Xi,Yi,Thetai,UL,UR):
     t = 0
-    r = 0.038
-    L = 0.354
+    r = 0.033
+    L = 0.160
     dt = 0.1
     Xn=Xi
     Yn=Yi
@@ -214,4 +214,4 @@ class Node():
       node_ind = valid_childs_dict[node_ind][2]
     print('The path is:', path)
     return path
-    
+   
