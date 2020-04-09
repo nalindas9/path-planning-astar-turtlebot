@@ -1,0 +1,8 @@
+prefix=/home/nalindas9/Documents/Courses/Spring_2020_Semester_2/ENPM661_Planning_For_Autonomous_Robots/Github/Project_3/path-planning-astar-turtlebot/turtlebot3_ws/devel
+
+Name: turtlebot3_description
+Description: Description of turtlebot3_description
+Version: 1.2.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: urdf xacro
