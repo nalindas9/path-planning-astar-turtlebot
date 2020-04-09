@@ -21,7 +21,7 @@ valid_childs_dict = {}
 # List to store all the explored nodes for visualization
 explored = []
 # Node class containing action set, graph generation and Astar Algorithm
-weight = 6
+weight = 5
 class Node():
   # Constructor for Node class
   def __init__(self, start_node, goal_node, parent_node, clearance, rpm1, rpm2):
@@ -192,7 +192,7 @@ class Node():
       child_costs= self.child_generator(min_cost_child, cum_cost)
       for child in child_costs:
         explored_nodes.append(child)
-        explored.append(child[1])
+        explored.append(child)
       explored_nodes.sort(key=operator.itemgetter(0))
       #print('Explored Nodes:', explored_nodes)
       cum_cost = explored_nodes[0][2]
