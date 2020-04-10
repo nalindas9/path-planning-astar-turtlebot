@@ -39,7 +39,7 @@ def main():
   s1 = algo.Node(start_point, goal_point, [0,0], robot_radius+clearance, rpm[0], rpm[1])
   path, explored = s1.astar()
   
-  plt.title('Path planning implemented for a Rigid Robot using A* Algorithm',fontsize=10)
+  plt.title('Path planning implemented for Turtlebot 3 using A* Algorithm',fontsize=10)
   
   # Plotting the explored nodes and final path
   points1x = []
@@ -57,9 +57,9 @@ def main():
     points1y.append(explored[point][4][1])
     points2x.append(explored[point][1][0]-(explored[point][4][0]))
     points2y.append(explored[point][1][1]-(explored[point][4][1]))
-    plt.quiver(explored[point][4][0], explored[point][4][1], explored[point][1][0]-(explored[point][4][0]), explored[point][1][1]-(explored[point][4][1]), units='xy' ,scale=1, label = 'Final Path', color = 'g', width =0.02, headwidth = 1,headlength=0)
-    if point%10 == 0:
-      plt.savefig('/home/nalindas9/Desktop/images/'+'img' + str(point) + '.png', dpi = 300)
+    #plt.quiver(explored[point][4][0], explored[point][4][1], explored[point][1][0]-(explored[point][4][0]), explored[point][1][1]-(explored[point][4][1]), units='xy' ,scale=1, label = 'Final Path', color = 'g', width =0.02, headwidth = 1,headlength=0)
+    #if point%10 == 0:
+      #plt.savefig('/home/nalindas9/Desktop/images/'+'img' + str(point) + '.png', dpi = 300)
    
   for point in range(len(path)):
     if point+1 < len(path):
@@ -67,19 +67,19 @@ def main():
       points3y.append((path[point][1]))
       points4x.append((path[point+1][0])-(path[point][0]))
       points4y.append((path[point+1][1])-(path[point][1]))
-      plt.quiver(path[point][0], (path[point][1]), (path[point+1][0])-(path[point][0]), (path[point+1][1])-(path[point][1]), units='xy' ,scale=1, label = 'Final Path', width =0.07, headwidth = 1,headlength=0)
-      plt.savefig('/home/nalindas9/Desktop/images/'+'img' + str(point+len(explored)) + '.png', dpi = 300)
+      #plt.quiver(path[point][0], (path[point][1]), (path[point+1][0])-(path[point][0]), (path[point+1][1])-(path[point][1]), units='xy' ,scale=1, label = 'Final Path', width =0.07, headwidth = 1,headlength=0)
+      #plt.savefig('/home/nalindas9/Desktop/images/'+'img' + str(point+len(explored)) + '.png', dpi = 300)
     else:
       points3x.append(path[point][0])
       points3y.append((path[point][1]))
       points4x.append((path[-1][0])-(path[point][0]))
       points4y.append((path[-1][1])-(path[point][1]))
-      plt.quiver(path[point][0], (path[point][1]), (path[-1][0])-(path[point][0]), (path[-1][1])-(path[point][1]), units='xy' ,scale=1, label = 'Final Path', width =0.07, headwidth = 1,headlength=0)
-      plt.savefig('/home/nalindas9/Desktop/images/'+'img' + str(point+len(explored)) + '.png', dpi = 300)
+      #plt.quiver(path[point][0], (path[point][1]), (path[-1][0])-(path[point][0]), (path[-1][1])-(path[point][1]), units='xy' ,scale=1, label = 'Final Path', width =0.07, headwidth = 1,headlength=0)
+      #plt.savefig('/home/nalindas9/Desktop/images/'+'img' + str(point+len(explored)) + '.png', dpi = 300)
   
-  #plt.quiver(np.array(points1x), np.array(points1y), np.array(points2x), np.array(points2y), units='xy' ,scale=1, label = 'Final Path', color = 'g', width =0.02, headwidth = 1,headlength=0)
+  plt.quiver(np.array(points1x), np.array(points1y), np.array(points2x), np.array(points2y), units='xy' ,scale=1, label = 'Final Path', color = 'g', width =0.02, headwidth = 1,headlength=0)
      
-  #plt.quiver(np.array(points3x), np.array(points3y), np.array(points4x), np.array(points4y), units='xy' ,scale=1, label = 'Final Path', color = 'b', width =0.02, headwidth = 1,headlength=0)
+  plt.quiver(np.array(points3x), np.array(points3y), np.array(points4x), np.array(points4y), units='xy' ,scale=1, label = 'Final Path', color = 'b', width =0.02, headwidth = 1,headlength=0)
   
   plt.show()
   plt.close()

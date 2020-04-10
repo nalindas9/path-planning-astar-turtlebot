@@ -437,6 +437,24 @@ clean: turtlebot3/turtlebot3/CMakeFiles/_catkin_empty_exported_target.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory turtlebot3_astar
+
+# Convenience name for "all" pass in the directory.
+turtlebot3_astar/all:
+
+.PHONY : turtlebot3_astar/all
+
+# Convenience name for "clean" pass in the directory.
+turtlebot3_astar/clean:
+
+.PHONY : turtlebot3_astar/clean
+
+# Convenience name for "preinstall" pass in the directory.
+turtlebot3_astar/preinstall:
+
+.PHONY : turtlebot3_astar/preinstall
+
+#=============================================================================
 # Directory level rules for directory turtlebot3_msgs
 
 # Convenience name for "all" pass in the directory.

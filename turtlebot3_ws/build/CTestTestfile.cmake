@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
 subdirs(turtlebot3/turtlebot3)
+subdirs(turtlebot3_astar)
 subdirs(turtlebot3_msgs)
 subdirs(turtlebot3/turtlebot3_navigation)
 subdirs(turtlebot3_simulations/turtlebot3_simulations)

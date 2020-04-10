@@ -783,6 +783,12 @@ turtlebot3_BINARY_DIR:STATIC=/home/nalindas9/Documents/Courses/Spring_2020_Semes
 turtlebot3_SOURCE_DIR:STATIC=/home/nalindas9/Documents/Courses/Spring_2020_Semester_2/ENPM661_Planning_For_Autonomous_Robots/Github/Project_3/path-planning-astar-turtlebot/turtlebot3_ws/src/turtlebot3/turtlebot3
 
 //Value Computed by CMake
+turtlebot3_astar_BINARY_DIR:STATIC=/home/nalindas9/Documents/Courses/Spring_2020_Semester_2/ENPM661_Planning_For_Autonomous_Robots/Github/Project_3/path-planning-astar-turtlebot/turtlebot3_ws/build/turtlebot3_astar
+
+//Value Computed by CMake
+turtlebot3_astar_SOURCE_DIR:STATIC=/home/nalindas9/Documents/Courses/Spring_2020_Semester_2/ENPM661_Planning_For_Autonomous_Robots/Github/Project_3/path-planning-astar-turtlebot/turtlebot3_ws/src/turtlebot3_astar
+
+//Value Computed by CMake
 turtlebot3_bringup_BINARY_DIR:STATIC=/home/nalindas9/Documents/Courses/Spring_2020_Semester_2/ENPM661_Planning_For_Autonomous_Robots/Github/Project_3/path-planning-astar-turtlebot/turtlebot3_ws/build/turtlebot3/turtlebot3_bringup
 
 //Value Computed by CMake
@@ -1007,7 +1013,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
