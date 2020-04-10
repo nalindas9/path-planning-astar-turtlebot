@@ -1,8 +1,0 @@
-prefix=/home/nalindas9/Documents/Courses/Spring_2020_Semester_2/ENPM661_Planning_For_Autonomous_Robots/Github/Project_3/path-planning-astar-turtlebot/turtlebot3_ws/devel
-
-Name: turtlebot3_navigation
-Description: Description of turtlebot3_navigation
-Version: 1.2.3
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
