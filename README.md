@@ -1,7 +1,7 @@
 # path-planning-astar-turtlebot
 This is the repository for the project - Path planning implemented for the Turtlebot using A* Algorithm. 
 
-## Phase 1
+## Phase 3
 ### System and library requirements.
  - Python3
  - Numpy
@@ -25,7 +25,7 @@ If the points provided are in the obstacle space or out of bounds, program will 
 
 The blue circle is the start point, and the yellow circle is the goal with threshold radius of 0.25 meters. The green color is for the explored nodes, while the black color signifies the final path. 
 
-## Phase 2
+## Phase 4
 
 ## System and library requirements.
  - Python3
