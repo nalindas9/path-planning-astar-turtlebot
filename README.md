@@ -2,6 +2,9 @@
 This is the repository for the project - Path planning implemented for the Turtlebot using A* Algorithm. 
 
 ## Phase 3
+
+<img src = "images/ezgif-2-620069a61144.gif">
+
 ### System and library requirements.
  - Python3
  - Numpy
@@ -26,6 +29,8 @@ If the points provided are in the obstacle space or out of bounds, program will 
 The blue circle is the start point, and the yellow circle is the goal with threshold radius of 0.25 meters. The green color is for the explored nodes, while the black color signifies the final path. 
 
 ## Phase 4
+
+<img src = "images/ezgif-2-2a145b0b2da8.gif">
 
 ## System and library requirements.
  - Python3
