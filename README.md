@@ -1,4 +1,7 @@
 # path-planning-astar-turtlebot
+[![License:MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/nalindas9/path-planning-astar-turtlebot/blob/master/LICENSE)
+
+## About
 This is the repository for the project - Path planning implemented for the Turtlebot using A* Algorithm. 
 
 ## Phase 3
